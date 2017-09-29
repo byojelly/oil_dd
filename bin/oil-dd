@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require "bundler/setup"
-require "oil" #require folder
-#above sets up a load dependency which requires a specific file
-
-Oil::Cli.new.call

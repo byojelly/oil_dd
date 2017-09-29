@@ -2,6 +2,7 @@ class Oil::Cli
 
   def call
     welcome
+    list_deals
   end
   def welcome
     puts <<-DOC.gsub /^\s*/, ''
@@ -18,5 +19,9 @@ class Oil::Cli
 
             To find the lowest current price of oil type lowest into the terminal. Or, if you would like to know more information about one of the companies above please type in the corresponding reference number next to the company name.
          DOC
+  end
+  def list_deals
+    @deals = Oil::DailyDeal.today
+
   end
 end
